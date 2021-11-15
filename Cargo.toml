@@ -10,10 +10,11 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-eframe = "0.15.0" # Gives us egui, epi and web+native backends
+eframe = "0.15.0"# Gives us egui, epi and web+native backends
 
 serde = { version = "1", features = ["derive"], optional = true }
 clipboard-win = "4.2.2"
+windows = { version = "0.26.0", features = ["ApplicationModel_DataTransfer", "Foundation"] }
 [features]
 default = ["persistence"]
 persistence = ["eframe/persistence", "serde"] # Enable if you want to persist app state on shutdown
