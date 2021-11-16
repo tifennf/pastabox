@@ -2,6 +2,8 @@
 
 tool to manage your clipboard, because i copy paste very often
 
+started from eframe template: https://github.com/emilk/eframe_template/
+
 Features:   
  - ONLY windows support for now, because i use windows :/
  - auto import your last clipboard ( possible to turn off )
