@@ -43,6 +43,10 @@ impl epi::App for PastaBox {
         _frame: &mut epi::Frame<'_>,
         storage: Option<&dyn epi::Storage>,
     ) {
+        // let size = Vec2::new(900.0, 600.0);
+
+        // frame.set_window_size(size);
+
         #[cfg(feature = "persistence")]
         if let Some(storage) = storage {
             *self = epi::get_value(storage, epi::APP_KEY).unwrap_or_default();
@@ -87,11 +91,12 @@ impl epi::App for PastaBox {
                         "Off".to_string()
                     }
                 };
-
                 let auto_status = format!("Auto: {}", auto_status);
 
                 let auto = ui.button(auto_status);
                 let clean = ui.button("Clean");
+
+                // ui.add_space(ui.available_width());
 
                 if add_button.clicked() {
                     let guard = pastabox.lock();
