@@ -98,7 +98,7 @@ impl epi::App for PastaBox {
 
                 // ui.add_space(ui.available_width());
 
-                if add_button.clicked() {
+                if add_button.clicked() && new_pasta.len() > 0 {
                     let guard = pastabox.lock();
 
                     if let Ok(mut list) = guard {
